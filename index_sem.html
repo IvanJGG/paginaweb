@@ -12,6 +12,46 @@
     main { padding: 20px; }
     section { margin-bottom: 20px; }
     h2 { color: #333; }
+    article {
+    background-color: #f9f9f9;   /* Fondo claro */
+    border: 1px solid #ddd;      /* Borde suave */
+    border-radius: 10px;         /* Bordes redondeados */
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Sombras suaves */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    article:hover {
+    transform: translateY(-5px); /* Efecto flotante */
+    box-shadow: 0 8px 12px rgba(0,0,0,0.15);
+    }
+
+    article h3 {
+    margin-top: 0;
+    color: #222;
+    }
+
+    article p {
+    color: #555;
+    line-height: 1.6;
+    }
+
+    /* Responsivo: los artículos se verán tipo grid en pantallas grandes */
+    @media (min-width: 768px) {
+    #mis-proyectos {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+        gap: 20px;
+    }
+    }
+
+    @media (min-width: 1024px) {
+    #mis-proyectos {
+        grid-template-columns: repeat(3, 1fr); /* Tres columnas */
+    }
+    }
+
   </style>
 </head>
 <body>
